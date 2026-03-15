@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Обратная связь</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Внутренние стили (несколько определений) -->
+  <style>
+    /* внутренний стиль: подсветим заголовок формы и метку обязательности */
+    .form-title { display:flex; align-items:baseline; gap:10px; }
+    .required-hint::after { content: " *"; font-weight: 800; }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Обратная связь</h1>
+      <p class="muted" style="margin-top:0;">
+        Можно оставить сообщение и выбрать удобный канал связи.
+      </p>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html"><span>Главная</span></a>
+        <a href="feedback.html" aria-current="page"><span>Обратная связь</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="card">
+        <div class="form-title">
+          <h2 class="section-title" style="margin:0;">Форма сообщения</h2>
+          <span class="badge">Заполните поля</span>
+        </div>
+        <p class="muted" style="margin-top:8px;">
+          Поля, отмеченные звёздочкой, обязательны.
+        </p>
+
+        <form action="#" method="post" autocomplete="on">
+          <fieldset>
+            <legend>Контактные данные</legend>
+
+            <div class="row">
+              <div class="col">
+                <label for="name" class="required-hint">Имя</label>
+                <input id="name" name="name" type="text" required placeholder="Ваше имя" />
+              </div>
+
+              <div class="col">
+                <label for="email" class="required-hint">Email</label>
+                <input id="email" name="email" type="email" required placeholder="vyubykov_1@edu.hse.ru" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" />
+              </div>
+              <div class="col">
+                <label for="date">Дата</label>
+                <input id="date" name="date" type="date" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Параметры</legend>
+
+            <div class="row">
+              <div class="col">
+                <label for="topic" class="required-hint">Тема</label>
+                <select id="topic" name="topic" required>
+                  <option value="" selected disabled>Выберите тему</option>
+                  <option value="study">Учёба</option>
+                  <option value="work">Работа</option>
+                  <option value="math">Актуарная математика</option>
+                  <option value="analytics">Аналитика</option>
+                  <option value="other">Другое</option>
+                </select>
+              </div>
+
+              <div class="col">
+                <label for="channel" class="required-hint">Канал связи</label>
+                <select id="channel" name="channel" required>
+                  <option value="" selected disabled>Выберите канал</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Телефон</option>
+                  <option value="telegram">Telegram</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="priority">Приоритет</label>
+            <input id="priority" name="priority" type="range" min="1" max="5" value="3" />
+
+            <div class="row">
+              <div class="col">
+                <label for="time">Удобное время</label>
+                <input id="time" name="time" type="time" />
+              </div>
+              <div class="col">
+                <label for="file">Файл</label>
+                <input id="file" name="file" type="file" accept=".pdf,.png,.jpg,.jpeg" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Сообщение</legend>
+
+            <label for="message" class="required-hint">Текст</label>
+            <textarea id="message" name="message" required placeholder="Напишите сообщение..."></textarea>
+
+            <label style="margin-top:12px;">
+              <input type="checkbox" name="agree" required />
+              Я согласен(на) на обработку персональных данных
+            </label>
+          </fieldset>
+
+          <div class="actions">
+            <button class="btn" type="submit">Отправить</button>
+            <button class="btn secondary" type="reset">Очистить</button>
+          </div>
+
+          <p class="muted" style="margin-bottom:0;">
+            Контакт: <a href="mailto:vyubykov_1@edu.hse.ru">vyubykov_1@edu.hse.ru</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p style="margin:0;">© 2026 Владимир • <a href="index.html">На главную</a></p>
+    </div>
+  </footer>
+</body>
+</html>

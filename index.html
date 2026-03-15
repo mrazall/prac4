@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Я — студент ВШЭ</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f8f9fa;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #ffffff 0%, #e9ecef 100%);
+    }
+
+    .section-title {
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+    }
+
+    .profile-img {
+      max-width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12);
+      background: #fff;
+      padding: 1rem;
+    }
+
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+    }
+
+    footer {
+      background: #212529;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">ВШЭ Student Page</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Переключить навигацию"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Обо мне</a></li>
+          <li class="nav-item"><a class="nav-link" href="#study">Учёба</a></li>
+          <li class="nav-item"><a class="nav-link" href="#chart">Диаграмма</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Обратная связь</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold mb-3">Я — студент ВШЭ</h1>
+          <p class="lead">
+            Меня зовут Владимир. Я студент НИУ ВШЭ и интересуюсь
+            аналитикой и актуарной математикой.
+          </p>
+          <p>
+            На этой странице представлена краткая информация обо мне,
+            моих учебных интересах, пример распределения времени и форма обратной связи.
+          </p>
+          <a href="#about" class="btn btn-dark btn-lg me-2">Узнать больше</a>
+          <a href="#contact" class="btn btn-outline-dark btn-lg">Написать мне</a>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <img src="assets/hse.svg" alt="Символика ВШЭ" class="profile-img img-fluid" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Обо мне</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 p-4">
+            <h3 class="h5">Образование</h3>
+            <p class="mb-0">
+              Я обучаюсь в Национальном исследовательском университете
+              «Высшая школа экономики».
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 p-4">
+            <h3 class="h5">Интересы</h3>
+            <p class="mb-0">
+              Основные направления моих интересов —
+              аналитика, статистика, страховые модели и актуарная математика.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 p-4">
+            <h3 class="h5">Практика</h3>
+            <p class="mb-0">
+              Основная занятость связана с работой в СК «Согласие»,
+              что помогает применять знания на практике.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Study -->
+  <section id="study" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title text-center">Учёба и деятельность</h2>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6">
+          <div class="card h-100 p-4">
+            <h3 class="h5 mb-3">Что я изучаю</h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Аналитика данных</li>
+              <li class="list-group-item">Актуарная математика</li>
+              <li class="list-group-item">Теория вероятностей и статистика</li>
+              <li class="list-group-item">Математическое моделирование</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card h-100 p-4">
+            <h3 class="h5 mb-3">Пример недельного расписания</h3>
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle mb-0">
+                <thead class="table-dark">
+                  <tr>
+                    <th>День</th>
+                    <th>Основная деятельность</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Понедельник</td>
+                    <td>Работа в СК «Согласие»</td>
+                  </tr>
+                  <tr>
+                    <td>Вторник</td>
+                    <td>Посещение пар в ВШЭ</td>
+                  </tr>
+                  <tr>
+                    <td>Среда</td>
+                    <td>Работа в СК «Согласие»</td>
+                  </tr>
+                  <tr>
+                    <td>Четверг</td>
+                    <td>Работа в СК «Согласие»</td>
+                  </tr>
+                  <tr>
+                    <td>Пятница</td>
+                    <td>Работа в СК «Согласие»</td>
+                  </tr>
+                  <tr>
+                    <td>Выходные</td>
+                    <td>Самостоятельная подготовка и отдых</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Chart -->
+  <section id="chart" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Диаграмма учебных интересов</h2>
+      <p class="text-center text-muted mb-4">
+        Ниже приведён пример диаграммы, построенной с помощью библиотеки Plotly.js.
+      </p>
+
+      <div class="card p-4">
+        <div id="plotlyChart" style="width: 100%; height: 450px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title text-center">Обратная связь</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card p-4">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Имя</label>
+                <input type="text" class="form-control" id="name" placeholder="Введите имя" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="vyubykov_1@edu.hse.ru"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="topic" class="form-label">Тема обращения</label>
+                <select class="form-select" id="topic" required>
+                  <option selected disabled>Выберите тему</option>
+                  <option>Учёба</option>
+                  <option>Аналитика</option>
+                  <option>Актуарная математика</option>
+                  <option>Работа</option>
+                  <option>Другое</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label d-block">Предпочтительный способ связи</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail" checked />
+                  <label class="form-check-label" for="contactEmail">Email</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="contactMethod" id="contactTelegram" />
+                  <label class="form-check-label" for="contactTelegram">Telegram</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Сообщение</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Введите сообщение"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="agree" required />
+                <label class="form-check-label" for="agree">
+                  Я согласен(на) на обработку персональных данных
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-dark">Отправить</button>
+              <button type="reset" class="btn btn-outline-secondary">Очистить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4">
+    <div class="container text-center">
+      <p class="mb-1">© 2026 Владимир</p>
+      <p class="mb-0">
+        Контакт:
+        <a href="mailto:vyubykov_1@edu.hse.ru" class="text-white">
+          vyubykov_1@edu.hse.ru
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+  <script>
+    const data = [{
+      x: ['Аналитика', 'Актуарная математика', 'Статистика', 'Программирование'],
+      y: [35, 30, 20, 15],
+      type: 'bar',
+      marker: {
+        color: ['#212529', '#495057', '#6c757d', '#adb5bd']
+      }
+    }];
+
+    const layout = {
+      title: 'Распределение учебных интересов, %',
+      xaxis: {
+        title: 'Направления'
+      },
+      yaxis: {
+        title: 'Доля интереса'
+      },
+      margin: { t: 60, l: 60, r: 30, b: 80 }
+    };
+
+    Plotly.newPlot('plotlyChart', data, layout, {responsive: true});
+  </script>
+</body>
+</html>
